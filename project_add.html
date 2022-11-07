@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SurveyX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="Shortcut Icon" type="image/x-icon" href="images/webicon.png" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<script type="text/javascript" language="javascript">
+		function checkfile(sender) {
+
+			// 可接受的附檔名
+			var validExts = new Array(".jpeg", ".jpg", ".png");
+
+			var fileExt = sender.value;
+			fileExt = fileExt.substring(fileExt.lastIndexOf('.'));
+			if (validExts.indexOf(fileExt) < 0) {
+				alert("檔案類型錯誤，可接受的副檔名有：" + validExts.toString());
+				sender.value = null;
+				return false;
+			}
+			else return true;
+		}
+	</script>
+	<body class="is-preload">
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">SurveyX</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="project_manage.php" class="active">專案管理</a></li>
+						<li><a href="member.php">會員資料</a></li>
+					</ul>
+				</nav>
+			</header>
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<section class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+						<form method="POST" action="project_add.php" enctype="multipart/form-data">
+							<section>
+								<div class="content">
+									<label for="project_name">專案名稱</label>
+									<input type="text" name="project_name" id="project_name" placeholder="https://www.surveyx.tw/survey/(youraccount)/專案名稱.php" required/>
+									<br/>
+									<label for="project_title">問卷標題</label>
+									<input type="text" name="project_title" id="project_title" />
+									<br/>
+									<label for="ga_head">GA代碼</label>
+									<input type="text" name="ga_head" id="ga_head" placeholder="請將整個代碼複製貼至此"/>
+									<br/>
+									<label for="fb_code">FB pixel代碼</label>
+									<input type="text" name="fb_code" id="fb_code" placeholder="請將整個代碼複製貼至此"/>
+									<br/>
+									<label for="ga_body">加好友網址</label>
+									<input type="text" name="ga_body" id="ga_body"/>
+									<br/>
+									<label for="dealer">經銷商</label>
+									<input type="text" name="dealer" id="dealer" />
+									<br/>
+								</div>
+								<div class="row gtr-uniform">
+									<div class="col-6 col-12-xsmall">
+										<label for="talking_date">方便談話日期</label>
+										<input type="date" name="talking_date" id="talking_date" />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<label for="talking_time">方便談話時間</label>
+										<select name="talking_time" id="talking_time">
+											<option value="am">上午10:00~12:00</option>
+											<option value="pm">下午2:00~5:00</option>
+										</select>
+									</div>
+								</div>
+							</section>
+							<br/>
+							<section>
+								<div class="content">
+									<h2>上傳背景圖案</h2>
+									<section class="features">
+										<input type="file" name="background_image" id="background_image" accept="image/*" onchange="checkfile(this)"/>
+										<!-- <div id="preview" style="width: 100%;border:1px solid gray;"></div> -->
+									</section>
+									<input type="radio" name="bg_type" id="bg_fix" value="bg_fix"/>
+									<label for="bg_fix">背景固定</label>
+									<input type="radio" name="bg_type" id="bg_slide" value="bg_slide"/>
+									<label for="bg_slide">背景滑動</label>
+									<br/>
+									<h2>上傳Logo</h2>
+									<section class="features">
+										<input type="file" name="logo_image" id="logo_image" accept="image/*" onchange="checkfile(this)"/>
+										<!-- <div id="preview" style="width: 100%;border:1px solid gray;"></div> -->
+									</section>
+								</div>
+							</section>
+							<input type="submit"/>
+						</form>
+						</div>
+					</section>
+			</div>
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>Copyright &copy; Future Application Co., Ltd. - All rights reserved -</li>
+				<li>Future Application Co., Ltd.</li>
+				<li>Add. 7F., No. 1-4, Sec. 5, Zhongxiao E.
+				Rd., Xinyi Dist., Taipei City 110, Taiwan (R.O.C.)</li>
+				<li>Tel. +886266039997</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

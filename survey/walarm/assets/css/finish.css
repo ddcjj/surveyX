@@ -1,0 +1,29 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+body {
+  text-align: center;
+  background-image: url(../../images/finish/bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+div.main {
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+img.button {
+  margin-top: 30px;
+  width: 20%;
+}
+
+@media only screen and (max-width: 798px) {
+  img.button {
+    margin-top: 50px;
+    width: 60%;
+  }
+}

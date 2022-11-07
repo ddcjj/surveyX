@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>會員登入</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="Shortcut Icon" type="image/x-icon" href="images/webicon.png" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">SurveyX</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="project_manage.php">專案管理</a></li>
+						<li><a href="member.php"  class="active">會員資料</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Main -->
+			<section id="one" class="wrapper style2 spotlights ">
+				<section>
+					<div class="content">
+						
+					</div>
+					<div class="content">
+						<div class="inner">
+							<h2>會員登入</h2>
+						</div>
+						<form method="POST" action="login.php">
+							<div class="inner">
+								<div class="col-6 col-12">
+									<input type="text" name="account" id="account" value="" placeholder="帳號" />
+								</div>
+							</div>
+							<br/>
+							<div class="inner">
+								<div class="col-6 col-12">
+									<input type="password" name="password" id="password" placeholder="密碼" />
+								</div>
+							</div>
+							<br/>
+							<div class="inner">
+								<ul class="actions">
+									<li><input type="submit" value="登入" class="primary" /></li>
+								</ul>
+							</div>
+							<!-- <input type="hidden" name="refer" value="<?php echo (isset($_GET['refer'])) ? $_GET['refer'] : 'index.php'; ?>"> -->
+						</form>	
+						<br/>
+						<div class="inner">								
+							<ul class="actions">
+								<li><a href="modify_password.php" class="button" style="color: aliceblue;padding: 2vh;">忘記密碼</a>
+								<a href="register.html" class="button primary" style="padding:2vh;">會員註冊</a></li>
+							</ul>
+						</div>
+					</div>	
+					<div class="content">
+
+					</div>			
+				</section>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>Copyright &copy; Future Application Co., Ltd. - All rights reserved -</li>
+				<li>Future Application Co., Ltd.</li>
+				<li>Add. 7F., No. 1-4, Sec. 5, Zhongxiao E.
+				Rd., Xinyi Dist., Taipei City 110, Taiwan (R.O.C.)</li>
+				<li>Tel. +886266039997</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

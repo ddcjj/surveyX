@@ -1,0 +1,40 @@
+create table gogosong_q (
+    id int auto_increment primary key,
+    createDate datetime,
+    question1_1 varchar(5),
+    question1_2 varchar(5),
+    question1_3 varchar(5),
+    question1_4 varchar(5),
+    question1_5 varchar(5),
+    question1_6 varchar(5),
+    question1_7 varchar(5),
+
+    question2_1 varchar(5),
+    question2_2 varchar(5),
+    question2_3 varchar(5),
+    question2_4 varchar(5),
+    question2_5 varchar(5),
+    question2_6 varchar(5),
+
+    question3_1 varchar(5),
+    question3_2 varchar(5),
+    question3_3 varchar(5),
+    question3_4 varchar(5),
+    question3_5 varchar(5),
+    
+    question4_1 varchar(5),
+    question4_2 varchar(5),
+    question4_3 varchar(5),
+    question4_4 varchar(5),
+    question4_5 varchar(5),
+    question4_6 varchar(5),
+    question4_7 varchar(5),
+
+    question5 varchar(5),
+    question6 varchar(5),
+    question7 varchar(5),
+    question8 varchar(5),
+    email varchar(128),
+    tel varchar(16),
+    message varchar(256)
+);

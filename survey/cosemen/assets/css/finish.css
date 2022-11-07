@@ -1,0 +1,45 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+body {
+  text-align: center;
+  background-image: url(../../images/finish/bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+div.main {
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+img.button {
+  width: 30%;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 1680px) {
+  img.button {
+    width: 20%;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 798px) {
+  img.button {
+    width: 30%;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-image: url(../../images/finish/bg-m.png);
+  }
+  img.button {
+    width: 70%;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SurveyX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="Shortcut Icon" type="image/x-icon" href="images/webicon.png" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+			https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+
+		<script>
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+			apiKey: "AIzaSyC16kWbX6OIgG4wFJRh_raMii86hyelal8",
+			authDomain: "surveyx-965ac.firebaseapp.com",
+			projectId: "surveyx-965ac",
+			storageBucket: "surveyx-965ac.appspot.com",
+			messagingSenderId: "499062675104",
+			appId: "1:499062675104:web:ba3ba779bf9e90f0241bc5",
+			measurementId: "G-BXHYPBBCVN"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+		</script>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">SurveyX</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="project_manage.php">專案管理</a></li>
+						<li><a href="member.php" class="active">會員資料</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+			<!-- Main -->
+				<section id="main" class="wrapper">
+					<div class="inner">
+						<h2 class="major">會員註冊</h2>
+						<form method="POST" action="register.php" onsubmit="return checkFormData()">
+							<div class="row gtr-uniform">
+								<div class="col-12">
+									<label for="customer_account">帳號：</label>
+									<input type="text" name="customer_account" id="customer_account" value="" placeholder="帳號" required/>
+								</div>
+								<div class="col-12">
+									<label for="customer_password">密碼：(至少8碼)</label>
+									<input type="password" name="customer_password" id="customer_password" value="" minlength="8" maxlength="30" placeholder="密碼" required/>
+								</div>
+								<div class="col-12">
+									<label for="confirm_password">確認密碼：</label>
+									<input type="password" name="confirm_password" id="confirm_password" value="" minlength="8" maxlength="30" placeholder="確認密碼" required/>
+								</div>
+								<div class="col-12">
+									<label for="customer_name">聯絡人姓名：</label>
+									<input type="text" name="customer_name" id="customer_name" value="" placeholder="聯絡人姓名" required/>
+								</div>
+								<div class="col-12">
+									<label for="customer_email">Email：</label>
+									<input type="email" name="customer_email" id="customer_email" value="" placeholder="Email" required/>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<label for="customer_tel">手機號碼：</label>
+									<input type="text" value="+886" style="width: 12vh;text-align: center;" readonly>
+									<input type="tel" style="line-height: 2.75;" name="customer_tel" id="customer_tel" value="" placeholder="ex:0912345678" onkeypress="onlyNum()" required/>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<button type="button" id="get_code" class="register_button" style="color: aliceblue;" onclick="onGetClick();">取得驗證碼</button>
+									<div id="recaptcha-container" name="recaptcha-container"></div>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<label for="auth_code">驗證碼：</label>
+									<input type="text" style="line-height: 2.75;" name="auth_code" id="auth_code" minlength="6" maxlength="6" placeholder="驗證碼" onkeypress="onlyNum()" required/>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<button type="button" id="confirm_code" class="register_button" style="color: aliceblue;" onclick="onConfirmClick();">驗證手機</button>
+								</div>
+								<div class="col-2 col-12-xsmall">
+									<input type="text"  style="text-align: center;" id="confirm_status" name="confirm_status" value="未驗證" readonly />
+								</div>
+								<div class="col-12">
+									<label for="company_name">公司名稱：</label>
+									<input type="text" name="company_name" id="company_name" value="" placeholder="公司名稱"/>
+								</div>
+								<div class="col-12">
+									<label for="uniform_numbers">統一編號：</label>
+									<input type="text" name="uniform_numbers" id="uniform_numbers" value="" placeholder="統一編號"/>
+								</div>
+								<div class="col-12">
+									<label for="industry_category">產業類別：</label>
+									<input type="text" name="industry_category" id="industry_category" value="" placeholder="產業類別"/>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" value="註冊" class="primary" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>Copyright &copy; Future Application Co., Ltd. - All rights reserved -</li>
+				<li>Future Application Co., Ltd.</li>
+				<li>Add. 7F., No. 1-4, Sec. 5, Zhongxiao E.
+				Rd., Xinyi Dist., Taipei City 110, Taiwan (R.O.C.)</li>
+				<li>Tel. +886266039997</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/firebase.js"></script>
+	</body>
+</html>

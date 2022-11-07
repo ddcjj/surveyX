@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>maxvet</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="maxvet">
+  <meta property="og:title" content="maxvet">
+  <meta property="og:image" content="images/index/meta.png">
+  <meta property="og:description" content="maxvet">
+  <!-- Facebook Pixel Code -->
+<!-- End Facebook Pixel Code -->
+</head>
+
+<body class="landing is-preload">
+  <!-- Main -->
+  <div style="text-align: center;
+    background-image: url(images/index/bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;">
+    <picture>
+      <source media="(max-width: 799px)" srcset="images/index/logo-m.png">
+      <source media="(min-width: 800px)" srcset="images/index/logo.png">
+      <img style="width: 100%;" data-src="images/index/logo.png" />
+    </picture>
+    <a href="#help"><img class="index_button" src="images/index/button.png" />
+    </a>
+  </div>
+  <div id="page-wrapper" class="css_bg">
+    <section style="background-color: white;">
+      <div id="help" style="display: flex; align-items: center;justify-content: center;">
+        <picture>
+          <source media="(max-width: 799px)" srcset="images/home/help-m.png">
+          <source media="(min-width: 800px)" srcset="images/home/help.png">
+          <img style="width: 100%;height: 100%;" data-src="images/home/help.png" />
+        </picture>
+      </div>
+      <ul class="actions special" style="margin:0px;margin-top: 30px;">
+        <li><a href="#q1"><img class="next" style="width:240px;height:80px;" src="images/home/next.png"></a></li>
+      </ul>
+    </section>
+    <section id="q1" style="background-color: white;">
+      <div style="display: flex; align-items: center;justify-content: center;">
+        <picture>
+          <source media="(max-width: 799px)" srcset="images/home/features-m.png">
+          <source media="(min-width: 800px)" srcset="images/home/features.png">
+          <img style="width: 100%;height: 100%;" data-src="images/home/features.png" />
+        </picture>
+      </div>
+      <ul class="actions special" style="margin:0px;margin-top: 30px;">
+        <li><a href="#q2"><img class="next" style="width:240px;height:80px;" src="images/home/next.png"></a></li>
+      </ul>
+    </section>
+    <section id="main" class="container">
+      <form id="mainForm" action="questionnaire_output.php" method="POST">
+        <section class="box special" id="q2">
+          <header class="major">
+            <h2 class="css_h2">
+              If you're interested in further discussion, please leave your information.
+              <br/>We will arrange the meeting asap.
+            </h2>
+            <section class="box">
+              <div class="row gtr-uniform gtr-50">
+                <h2 class="css_h2">1. Where are you from？</h2>
+                <div class="col-12">
+                  <input type="text" name="wcf" id="wcf" placeholder="from" rows="1" />
+                </div>
+                <h2 class="css_h2">2. Company</h2>
+                <div class="col-12">
+                  <input type="text" name="company" id="company" placeholder="company" rows="1" />
+                </div>
+                <h2 class="css_h2">3. Contact</h2>
+                <div class="col-12">
+                  <input type="text" name="contact" id="contact" placeholder="contact" rows="1" />
+                </div>
+                <h2 class="css_h2">4. Email*</h2>
+                <div class="col-12">
+                  <input type="email" name="email" id="email" placeholder="Email" rows="1" required />
+                </div>
+                <h2 class="css_h2">5. Whatsapp number</h2>
+                <div class="col-12">
+                  <input type="text" name="whatsapp" id="whatsapp" placeholder="Whatsapp number" rows="1" />
+                </div>
+              </div>
+            </section>
+          </header>
+        </section>
+        <section class="box special">
+          <header class="major">
+            <h2 class="css_h2">6. Available time for meeting (you can choose more than one option)</h2>
+            <section class="box">
+              <div class="row gtr-uniform gtr-50">
+                <div class="col-12" style="display: flex;align-items: center;justify-content: space-between;">
+                  <h2 class="css_h2" style="padding: 0px;width: 60px;">Mon.</h2>
+                  <label style="margin: 0;"><input type="checkbox" name="Mon_1" id="Mon_1" value="1">9:00 - 13:00</label>
+                  <label><input type="checkbox" name="Mon_2" id="Mon_2" value="2">13:00 - 17:00</label>
+                </div>
+                <div class="col-12" style="display: flex;align-items: center;justify-content: space-between;">
+                  <h2 class="css_h2" style="padding: 0px;width: 60px;">Tues.</h2>
+                  <label style="margin: 0;"><input type="checkbox" name="Tues_1" id="Tues_1" value="1">9:00 - 13:00</label>
+                  <label><input type="checkbox" name="Tues_2" id="Tues_2" value="2">13:00 - 17:00</label>
+                </div>
+                <div class="col-12" style="display: flex;align-items: center;justify-content: space-between;">
+                  <h2 class="css_h2" style="padding: 0px;width: 60px;">Wed.</h2>
+                  <label style="margin: 0;"><input type="checkbox" name="Wed_1" id="Wed_1" value="1">9:00 - 13:00</label>
+                  <label><input type="checkbox" name="Wed_2" id="Wed_2" value="2">13:00 - 17:00</label>
+                </div>
+                <div class="col-12" style="display: flex;align-items: center;justify-content: space-between;">
+                  <h2 class="css_h2" style="padding: 0px;width: 60px;">Thur.</h2>
+                  <label style="margin: 0;"><input type="checkbox" name="Thur_1" id="Thur_1" value="1">9:00 - 13:00</label>
+                  <label><input type="checkbox" name="Thur_2" id="Thur_2" value="2">13:00 - 17:00</label>
+                </div>
+                <div class="col-12" style="display: flex;align-items: center;justify-content: space-between;">
+                  <h2 class="css_h2" style="padding: 0px;width: 60px;">Fri.</h2>
+                  <label style="margin: 0;"><input type="checkbox" name="Fri_1" id="Fri_1" value="1">9:00 - 13:00</label>
+                  <label><input type="checkbox" name="Fri_2" id="Fri_2" value="2">13:00 - 17:00</label>
+                </div>
+              </div>
+            </section>
+          </header>
+        </section>
+        <ul class="actions special">
+          <input id="mainSubmit" type="submit" style="display: none;">
+          <li><a href="javascript: void(0)" onClick="submit()"><img style="width:320px;height:80px;" class="submit" src="images/home/submit.png"></a>
+          </li>
+        </ul>
+      </form>
+    </section>
+  </div>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
